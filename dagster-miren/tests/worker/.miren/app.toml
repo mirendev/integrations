@@ -1,0 +1,13 @@
+name = "dagster-miren-test"
+web = false
+
+[build]
+dockerfile = "Dockerfile"
+
+[tasks.dagster]
+command = "true"
+max_concurrent = 4
+
+[tasks.startup_probe]
+command = "sleep 120"
+max_concurrent = 1
